@@ -1,0 +1,15 @@
+# Format: Node Name,Node Name Up,Node Name Right,Node Name Down,Node Name Left
+# Node Names are strings, and any blank directions are "-" (withouth quotes)
+Sol,Alpha Centauri,Gateway,Sirius,-
+Alpha Centauri,Terra Nova,Andor,Sol,Vega
+Terra Nova,-,-,Alpha Centauri,-
+Vega,-,Alpha Centauri,-,Deneva
+Sirius,Sol,-,Vulcan,Tau Ceti
+Gateway,-,-,-,Sol
+Deneva,-,Vega,-,-
+Tau Ceti,-,Sirius,-,-
+Andor,-,Procyon,-,Alpha Centauri
+Procyon,-,Andor,-,-
+Vulcan,Sirius,Kro'el,-,-
+Kro'el,-,Regulus,-,Vulcan
+Regulus,-,-,-,Kro'el
