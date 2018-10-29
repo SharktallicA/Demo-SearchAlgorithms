@@ -6,10 +6,15 @@ using namespace std;
 int main(void)
 {
 	NodeLoader nL("Map.txt");
+	vector<Node*> map = nL.GetNodes();
 
-	BFS bfsAl(nL.GetNodes(), "Sol", "Tau Ceti");
+	BFS bfsAl(map, "Andor", "Tau Ceti");
 	string path = bfsAl.Run();
-	cout << path << endl;
+	cout << "BFS result:\n" << path << endl;
+
+	DFS dfsAl(map, "Andor", "Tau Ceti");
+	path = dfsAl.Run();
+	cout << "DFS result:\n" << path << endl;
 
 	Utility::pause();
 
