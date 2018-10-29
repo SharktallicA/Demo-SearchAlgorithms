@@ -1,5 +1,6 @@
 #include "NodeLoader.h"
-#include "Algorithm.h"
+#include "BFS.h"
+#include "DFS.h"
 
 using namespace std;
 
