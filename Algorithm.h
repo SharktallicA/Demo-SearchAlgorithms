@@ -28,9 +28,35 @@ protected:
 	//Flags which Nodes have been visited
 	vector<bool> visited;
 
+	//Finds the nearest adjacent Node
+	Node* findNearestNode(Node* ref)
+	{
+		vector<NodeData> adj = ref->GetAdjacentsData();
+		Node* nearest = nullptr;
+		int nearestCost = 0;
+
+		for (NodeData nD : adj)
+		{
+			if (nD.node)
+			{
+				if (!nearest)
+				{
+					nearest = nD.node;
+					nearestCost = nD.cost;
+				}
+				else if (nD.cost < nearestCost)
+				{
+					nearest = nD.node;
+					nearestCost = nD.cost;
+				}
+			}
+		}
+		return nearest;
+	}
+
 public:
 	Algorithm(void) {}
-	Algorithm(vector<Node*> nMap, string nStart, string nEnd = "")
+	Algorithm(vector<Node*> nMap, string nStart, string nEnd)
 	{
 		map = nMap;
 		startName = nStart;

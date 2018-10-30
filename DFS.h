@@ -36,7 +36,7 @@ private:
 		}
 	}
 public:
-	DFS(string nStart, string nEnd = "") {}
+	DFS(string nStart, string nEnd) {}
 	using Algorithm::Algorithm;
 
 	//Runs Depth-First search algorithm and returns the path taken

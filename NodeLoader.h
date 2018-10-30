@@ -34,9 +34,10 @@ private:
 				rawNodes.push_back(delimited);
 			}
 		}
-
+		ifMap.close();
 		return rawNodes;
 	}
+
 public:
 	NodeLoader(string nFileName) { fileName = nFileName; }
 
@@ -81,7 +82,7 @@ public:
 			}
 
 			//call for the mapping of the places to form the linked bonds
-			map[i]->MapRelativies(relatives[0], relatives[1], relatives[2], relatives[3]);
+			map[i]->MapRelativies(NodeData(relatives[0], stoi(raw[i][5])), NodeData(relatives[1], stoi(raw[i][6])), NodeData(relatives[2], stoi(raw[i][7])), NodeData(relatives[3], stoi(raw[i][8])));
 		}
 
 		// 4) Return the end result

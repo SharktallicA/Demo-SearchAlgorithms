@@ -9,7 +9,7 @@ private:
 	list<Node*> queue;
 
 public:
-	BFS(string nStart, string nEnd = "") {}
+	BFS(string nStart, string nEnd) {}
 	using Algorithm::Algorithm;
 
 	//Runs Breadth-First search algorithm and returns the path taken

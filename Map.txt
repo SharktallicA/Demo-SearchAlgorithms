@@ -1,15 +1,15 @@
 # Format: Node Name,Node Name Up,Node Name Right,Node Name Down,Node Name Left
 # Node Names are strings, and any blank directions are "-" (withouth quotes)
-Sol,Alpha Centauri,Gateway,Sirius,-
-Alpha Centauri,Terra Nova,Andor,Sol,Vega
-Terra Nova,-,-,Alpha Centauri,-
-Vega,-,Alpha Centauri,-,Deneva
-Sirius,Sol,-,Vulcan,Tau Ceti
-Gateway,-,-,-,Sol
-Deneva,-,Vega,-,-
-Tau Ceti,-,Sirius,-,-
-Andor,-,Procyon,-,Alpha Centauri
-Procyon,-,Andor,-,-
-Vulcan,Sirius,Kro'el,-,-
-Kro'el,-,Regulus,-,Vulcan
-Regulus,-,-,-,Kro'el
+Sol,Alpha Centauri,Gateway,Sirius,-,4,11,9,0
+Alpha Centauri,Terra Nova,Andor,Sol,Vega,15,3,4,21
+Terra Nova,-,-,Alpha Centauri,-,0,0,15,0
+Vega,-,Alpha Centauri,-,Deneva,0,21,0,47
+Sirius,Sol,-,Vulcan,Tau Ceti,9,0,7,3
+Gateway,Procyon,-,-,Sol,0,6,0,11
+Deneva,-,Vega,-,-,0,47,0,0
+Tau Ceti,-,Sirius,-,-,0,3,0,0
+Andor,-,Procyon,-,Alpha Centauri,0,3,0,3
+Procyon,-,Andor,Gateway,-,0,0,6,0
+Vulcan,Sirius,Kro'el,-,-,7,4,0,0
+Kro'el,-,Regulus,-,Vulcan,0,52,0,4
+Regulus,-,-,-,Kro'el,0,0,0,52
