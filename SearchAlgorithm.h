@@ -2,7 +2,7 @@
 #include "Node.h"
 #include <list>
 
-class Algorithm
+class SearchAlgorithm
 {
 protected:
 	string startName, endName;
@@ -55,8 +55,8 @@ protected:
 	}
 
 public:
-	Algorithm(void) {}
-	Algorithm(vector<Node*> nMap, string nStart, string nEnd)
+	SearchAlgorithm(void) {}
+	SearchAlgorithm(vector<Node*> nMap, string nStart, string nEnd)
 	{
 		map = nMap;
 		startName = nStart;

@@ -1,8 +1,8 @@
 #pragma once
-#include "Algorithm.h"
+#include "SearchAlgorithm.h"
 
 //Breadth-First Search algorithm implementation
-class BFS : public Algorithm
+class BFS : public SearchAlgorithm
 {
 private:
 	//Current list of Nodes waiting to be processed
@@ -10,7 +10,7 @@ private:
 
 public:
 	BFS(string nStart, string nEnd) {}
-	using Algorithm::Algorithm;
+	using SearchAlgorithm::SearchAlgorithm;
 
 	//Runs Breadth-First search algorithm and returns the path taken
 	string Run(void)
@@ -31,7 +31,7 @@ public:
 			if (current == endRef) return path;
 
 			//Reference to Nodes adjacent to the to-be-processed Node
-			Node** adjacents = current->GetAdjacents();
+			vector<Node*> adjacents = current->GetAdjacents();
 
 			//Push all unvisited adjacent Nodes into the queue
 			for (int i = 0; i < 4; i++)

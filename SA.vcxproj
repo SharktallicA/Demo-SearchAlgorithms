@@ -118,10 +118,10 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Algorithm.h" />
+    <ClInclude Include="SearchAlgorithm.h" />
     <ClInclude Include="BFS.h" />
     <ClInclude Include="DFS.h" />
-    <ClInclude Include="Dijsktra.h" />
+    <ClInclude Include="Dijkstra.h" />
     <ClInclude Include="NodeData.h" />
     <ClInclude Include="NodeLoader.h" />
     <ClInclude Include="Node.h" />

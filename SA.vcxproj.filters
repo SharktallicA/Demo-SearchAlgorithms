@@ -29,19 +29,19 @@
     <ClInclude Include="NodeLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Algorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BFS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DFS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dijsktra.h">
+    <ClInclude Include="NodeData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NodeData.h">
+    <ClInclude Include="SearchAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dijkstra.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

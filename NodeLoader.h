@@ -49,11 +49,7 @@ public:
 
 		vector<vector<string>> raw;
 		try { raw = loadNodes(); }
-		catch (char* msg)
-		{
-			cout << msg << endl;
-			throw;
-		}
+		catch (char* msg) { throw msg; }
 
 		// 2) Constructs a vector of Node objects from the raw data, using
 		// the place name at this point (all Nodes will have to be created before mapping adjacents)

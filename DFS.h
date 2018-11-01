@@ -1,8 +1,8 @@
 #pragma once
-#include "Algorithm.h"
+#include "SearchAlgorithm.h"
 
 //Depth-First Search algorithm implementation
-class DFS : public Algorithm
+class DFS : public SearchAlgorithm
 {
 private:
 	//For flagging when path as complete
@@ -22,7 +22,7 @@ private:
 		if (nP == endRef) complete = true;
 
 		//Reference to Nodes adjacent to the to-be-processed Node
-		Node** adjacents = nP->GetAdjacents();
+		vector<Node*> adjacents = nP->GetAdjacents();
 
 		//Recursive traverse to adjacent Nodes
 		for (int i = 0; i < 4; i++)
@@ -37,7 +37,7 @@ private:
 	}
 public:
 	DFS(string nStart, string nEnd) {}
-	using Algorithm::Algorithm;
+	using SearchAlgorithm::SearchAlgorithm;
 
 	//Runs Depth-First search algorithm and returns the path taken
 	string Run(void)
