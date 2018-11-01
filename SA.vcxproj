@@ -118,6 +118,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AStar.h" />
     <ClInclude Include="SearchAlgorithm.h" />
     <ClInclude Include="BFS.h" />
     <ClInclude Include="DFS.h" />

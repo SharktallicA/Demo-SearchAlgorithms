@@ -4,9 +4,11 @@
 //Dijkstra's shortest path finding algorithm implementation
 class Dijkstra : public SearchAlgorithm
 {
-private:
+protected:
+	//Stores temporal distance values for each Node
 	vector<int> distances;
 
+	//Flags which Nodes have been visited
 	vector<Node*> previous;
 
 	//Processes the distances between neighbouring Nodes to the current Node
@@ -42,11 +44,13 @@ private:
 	//Attempts to find the next Node on the path
 	void findNext(void)
 	{
-		//
+		//Current adjacent Nodes of the original current Node
 		vector<NodeData> currentAdj = current->GetValidAdjacentsData();
-		//
+
+		//Unassign current Node pointer
 		current = nullptr;
-		//
+
+		//Stores the current processed best distance (initialised as max integer value)
 		int currentBestDist = INT_MAX;
 
 		for (NodeData nP : currentAdj)
@@ -54,6 +58,7 @@ private:
 			//Index of current Node within map vector
 			int index = distance(map.begin(), find(map.begin(), map.end(), nP.node));
 
+			//Checks if processed Node is closer than last
 			if (distances[index] < currentBestDist && !visited[index])
 			{
 				current = nP.node;
@@ -63,7 +68,10 @@ private:
 		path += (current->GetName() + "\n");
 	}
 
+	virtual int heuristic(Node* n) { return INT_MAX; }
+
 public:
+	Dijkstra(void) {}
 	Dijkstra(string nStart, string nEnd) {}
 	using SearchAlgorithm::SearchAlgorithm;
 
