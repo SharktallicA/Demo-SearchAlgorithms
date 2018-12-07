@@ -24,11 +24,7 @@ public:
 	//Defines the layout of Nodes relative to this one
 	void MapRelativies(NodeData nUp, NodeData nDown, NodeData nLeft, NodeData nRight)
 	{
-		if (adj[0] || adj[1] || adj[2] || adj[3])
-		{
-			cout << "ILLEGAL CALL: Node already mapped!" << endl;
-			return;
-		}
+		if (adj[0] || adj[1] || adj[2] || adj[3]) throw "ERROR: Node already mapped!\n";
 
 		adj[0] = nUp.node;
 		adj[1] = nRight.node;
